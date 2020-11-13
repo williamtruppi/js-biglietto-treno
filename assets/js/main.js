@@ -16,14 +16,14 @@ var finalPrice;
 
 if (userAge < 18) {
   finalPrice = (userKilometers * 0.21) - ((userKilometers * 0.21) * 0.20);
-  alert("Lei aderisce allo sconto \"MINORENNI\", pertanto il costo del viaggio è di €. " + finalPrice);
-  document.getElementById("finalPrice").innerHTML = "Lei aderisce allo sconto \"MINORENNI\", pertanto il costo del viaggio è di €. " + finalPrice;
+  alert("Lei aderisce allo sconto \"MINORENNI\", pertanto il costo del viaggio è di €. " + finalPrice.toFixed(2));
+  document.getElementById("finalPrice").innerHTML = "Lei aderisce allo sconto \"MINORENNI\", pertanto il costo del viaggio è di €. " + finalPrice.toFixed(2);
 } else if (userAge >= 65) {
   finalPrice = (userKilometers * 0.21) - ((userKilometers * 0.21) * 0.40);
-  alert("Lei aderisce allo sconto \"OVER 65\", pertanto il costo del viaggio è di €. " + finalPrice);
-  document.getElementById("finalPrice").innerHTML = "Lei aderisce allo sconto \"OVER 65\", pertanto il costo del viaggio è di €. " + finalPrice;
+  alert("Lei aderisce allo sconto \"OVER 65\", pertanto il costo del viaggio è di €. " + finalPrice.toFixed(2));
+  document.getElementById("finalPrice").innerHTML = "Lei aderisce allo sconto \"OVER 65\", pertanto il costo del viaggio è di €. " + finalPrice.toFixed(2);
 } else {
   finalPrice = userKilometers * 0.21;
-  alert("Il costo del biglietto è di €. " + finalPrice);
-  document.getElementById("finalPrice").innerHTML = "Il costo del biglietto è di €. " + finalPrice;
+  alert("Il costo del biglietto è di €. " + finalPrice.toFixed(2));
+  document.getElementById("finalPrice").innerHTML = "Il costo del biglietto è di €. " + finalPrice.toFixed(2);
 }
